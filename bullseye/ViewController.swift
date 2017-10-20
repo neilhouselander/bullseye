@@ -28,21 +28,40 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var theSliderLabel: UISlider!
+    @IBOutlet weak var theSlider: UISlider!
     @IBOutlet weak var theTargetToGuessLabel: UILabel!
     @IBOutlet weak var theScoreLabel:UILabel!
     @IBOutlet weak var roundNumberLabel: UILabel!
+    @IBOutlet weak var avPerRoundLabel: UILabel!
     
     
     var currentValueSlider: Int = 0
     var targetValue : Int = 0
     var score: Int = 0
     var round: Int = 0
+    var avPerRound: Double = 0.00
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        newGame()
+        //slider UI
+        let thumbImageNormal = UIImage(named:"SliderThumb-Normal")
+        theSlider.setThumbImage(thumbImageNormal, for: .normal)
+        
+        let thumbImageHighlighted = UIImage(named: "SliderThumb-Highlighted")
+        theSlider.setThumbImage(thumbImageHighlighted, for: .highlighted)
+        
+        let insets = UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
+        
+        let trackImageLeft = UIImage(named:"SliderTrackLeft")
+        let trackLeftResizable = trackImageLeft?.resizableImage(withCapInsets: insets)
+        theSlider.setMinimumTrackImage(trackLeftResizable, for: .normal)
+        
+        let trackImageRight = UIImage(named:"SliderTrackRight")
+        let trackRightResizable = trackImageRight?.resizableImage(withCapInsets: insets)
+        theSlider.setMaximumTrackImage(trackRightResizable, for: .normal)
+        
+        startOver()
     }
 
     override func didReceiveMemoryWarning() {
@@ -54,7 +73,7 @@ class ViewController: UIViewController {
         
         targetValue = 1 + Int(arc4random_uniform(100))
         currentValueSlider = 50
-        theSliderLabel.value = Float(currentValueSlider)
+        theSlider.value = Float(currentValueSlider)
         round += 1
         updateLabels()
 
@@ -65,6 +84,7 @@ class ViewController: UIViewController {
         theTargetToGuessLabel.text = String(targetValue)
         theScoreLabel.text = String(score)
         roundNumberLabel.text = String(round)
+        avPerRoundLabel.text = String(avPerRound)
     }
     
     @IBAction func showAlert() {
@@ -92,6 +112,7 @@ class ViewController: UIViewController {
         }
         
         score = score + points + pointsBonus
+        avPerRound = Double(score/round)
         
         let message = "Target:\(targetValue) \nYou hit: \(currentValueSlider) \nPoints: \(points) + Bonus: \(pointsBonus) \nTotal: \(pointsBonus+points)"
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -117,18 +138,14 @@ class ViewController: UIViewController {
     
     @IBAction func startOver() {
         
-        newGame()
-        
-    }
-    
-    func newGame() {
-        
-        currentValueSlider = lroundf(theSliderLabel.value)
+        currentValueSlider = lroundf(theSlider.value)
         score = 0
         round = 0
+        avPerRound = 0
         startNewRound()
-           
+       
     }
+    
 
 }
 
