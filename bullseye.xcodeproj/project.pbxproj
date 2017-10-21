@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C135391C1F9A75A10052B16B /* NeilViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C135391B1F9A75A10052B16B /* NeilViewController.swift */; };
+		C16A9BD01F9BAE1400ED2217 /* launchScreen@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C16A9BCF1F9BAE1400ED2217 /* launchScreen@2x.png */; };
+		C16A9BD21F9BBE5500ED2217 /* BullsEye.html in Resources */ = {isa = PBXBuildFile; fileRef = C16A9BD11F9BBE5500ED2217 /* BullsEye.html */; };
 		C193A8B51F99297200F91AA0 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C193A8B41F99297200F91AA0 /* AboutViewController.swift */; };
 		C1F4FACC1F968871003E2CA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F4FACB1F968871003E2CA7 /* AppDelegate.swift */; };
 		C1F4FACE1F968871003E2CA7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1F4FACD1F968871003E2CA7 /* ViewController.swift */; };
@@ -18,6 +20,8 @@
 
 /* Begin PBXFileReference section */
 		C135391B1F9A75A10052B16B /* NeilViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeilViewController.swift; sourceTree = "<group>"; };
+		C16A9BCF1F9BAE1400ED2217 /* launchScreen@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "launchScreen@2x.png"; sourceTree = "<group>"; };
+		C16A9BD11F9BBE5500ED2217 /* BullsEye.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = BullsEye.html; sourceTree = "<group>"; };
 		C193A8B41F99297200F91AA0 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		C1F4FAC81F968871003E2CA7 /* bullseye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = bullseye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C1F4FACB1F968871003E2CA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +68,8 @@
 				C135391B1F9A75A10052B16B /* NeilViewController.swift */,
 				C1F4FACF1F968871003E2CA7 /* Main.storyboard */,
 				C1F4FAD21F968871003E2CA7 /* Assets.xcassets */,
+				C16A9BD11F9BBE5500ED2217 /* BullsEye.html */,
+				C16A9BCF1F9BAE1400ED2217 /* launchScreen@2x.png */,
 				C1F4FAD41F968871003E2CA7 /* LaunchScreen.storyboard */,
 				C1F4FAD71F968871003E2CA7 /* Info.plist */,
 			);
@@ -130,8 +136,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1F4FAD61F968871003E2CA7 /* LaunchScreen.storyboard in Resources */,
+				C16A9BD01F9BAE1400ED2217 /* launchScreen@2x.png in Resources */,
 				C1F4FAD31F968871003E2CA7 /* Assets.xcassets in Resources */,
 				C1F4FAD11F968871003E2CA7 /* Main.storyboard in Resources */,
+				C16A9BD21F9BBE5500ED2217 /* BullsEye.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
