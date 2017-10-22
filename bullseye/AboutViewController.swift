@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import WebKit
 
 class AboutViewController: UIViewController {
     
-    @IBOutlet weak var webview: UIWebView!
+    @IBOutlet weak var theWebView:WKWebView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +21,7 @@ class AboutViewController: UIViewController {
             if let htmlData = try? Data(contentsOf: url) {
                 
                 let baseUrl = URL(fileURLWithPath: Bundle.main.bundlePath)
-                webview.load(htmlData, mimeType: "text/html", textEncodingName: "UTF-8", baseURL: baseUrl)
+                theWebView.load(htmlData, mimeType: "text/html", characterEncodingName: "UTF-8", baseURL: baseUrl)
             }
         }
         

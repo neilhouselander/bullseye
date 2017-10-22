@@ -13,8 +13,8 @@ import UIKit
 //DONE add labels for instructions, score, round
 //DONE add slider with labels at either end
 //DONE add button hit me
-//customise slider
-//add resrt & information button
+//DONE customise slider
+//DONE add resrt & information button
 
 //code
 //DONE generate random number
@@ -22,7 +22,7 @@ import UIKit
 //DONE set up variables to hold score & round number
 //DONE add code to compare slider value to random number & assign score
 //DONE when hit me tocuhed comparison happens - popup with scoer & add to running score
-//reset game when reset hit
+//DONE reset game when reset hit
 
 
 
@@ -39,7 +39,7 @@ class ViewController: UIViewController {
     var targetValue : Int = 0
     var score: Int = 0
     var round: Int = 0
-    var avPerRound: Double = 0.00
+    var avPerRound: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -112,7 +112,7 @@ class ViewController: UIViewController {
         }
         
         score = score + points + pointsBonus
-        avPerRound = Double(score/round)
+        avPerRound = score/round
         
         let message = "Target:\(targetValue) \nYou hit: \(currentValueSlider) \nPoints: \(points) + Bonus: \(pointsBonus) \nTotal: \(pointsBonus+points)"
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
